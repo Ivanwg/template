@@ -1,0 +1,20 @@
+@mixin font-face($font-family, $file-path, $weight: normal, $ext: ' ttf', $style: normal) {
+  @font-face {
+      font-family: $font-family;
+      font-weight: $weight;
+      font-style: $style;
+      src: url('#{$file-path}.#{$ext}') format('truetype');
+  }
+}
+
+
+// MAIN FONT
+@include font-face('Nunito', '../fonts/Nunito-Light', 300, 'ttf');
+@include font-face('Nunito', '../fonts/Nunito-Regular', 400, 'ttf');
+@include font-face('Nunito', '../fonts/Nunito-Medium', 500, 'ttf');
+@include font-face('Nunito', '../fonts/Nunito-SemiBold', 600, 'ttf');
+@include font-face('Nunito', '../fonts/Nunito-Bold', 700, 'ttf');
+// SECOND FONT
+@include font-face('Roboto', '../fonts/Roboto-Regular', 400, 'ttf');
+@include font-face('Roboto', '../fonts/Roboto-Medium', 500, 'ttf');
+@include font-face('Roboto', '../fonts/Roboto-Bold', 700, 'ttf');

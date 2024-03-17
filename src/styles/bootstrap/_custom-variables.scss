@@ -1,0 +1,7 @@
+$spacer: 4px;
+
+$spacers: ();
+
+@for $i from 0 through 60 {
+  $spacers: map-merge($spacers, ($i: $spacer * $i));
+}

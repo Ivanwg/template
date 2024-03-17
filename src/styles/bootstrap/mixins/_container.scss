@@ -1,0 +1,38 @@
+// Container mixins
+
+@mixin make-container($gutter: $container-padding-x) {
+  --#{$prefix}gutter-x: #{$gutter};
+  --#{$prefix}gutter-y: 0;
+  width: 100%;
+  //   padding-right: calc(var(--#{$prefix}gutter-x) * .5); // stylelint-disable-line function-disallowed-list
+  //   padding-left: calc(var(--#{$prefix}gutter-x) * .5); // stylelint-disable-line function-disallowed-list
+
+  padding-right: calc(var(--#{$prefix}gutter-x) * 10);
+  padding-left: calc(var(--#{$prefix}gutter-x) * 10);
+  margin-right: auto;
+  margin-left: auto;
+
+  @include media-breakpoint-down(xxl) {
+
+  }
+
+  @include media-breakpoint-down(xl) {
+      padding-right: calc(var(--#{$prefix}gutter-x) * 6);
+      padding-left: calc(var(--#{$prefix}gutter-x) * 6);
+  }
+
+  @include media-breakpoint-down(lg) {
+      padding-right: calc(var(--#{$prefix}gutter-x) * 5);
+      padding-left: calc(var(--#{$prefix}gutter-x) * 5);
+  }
+
+  @include media-breakpoint-down(md) {
+
+  }
+
+  @include media-breakpoint-down(sm) {
+      padding-right: calc(var(--#{$prefix}gutter-x) * 4);
+      padding-left: calc(var(--#{$prefix}gutter-x) * 4);
+  }
+
+}
